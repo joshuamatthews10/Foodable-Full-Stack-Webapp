@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Login_Page.css" />
+    <meta
+      name="google-signin-client_id"
+      content="437184470351-9voq0m6bg6lkoio7jstsaou2ap1lqu6d.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Foodify: Sign in</title>
+  </head>
+  <body>
+    <div class="user">
+      <header class="page_header_logo">
+        <a href="Index.html">
+          <img src="Img/foodablemain.jpg" alt="foodable" />
+        </a>
+        <h1 class="page_title">Foodable Sign In</h1>
+      </header>
+
+      <form class="form">
+        <div class="accounttype">
+          <input type="radio" name="Donator" /> Donator
+          <input type="radio" name="Donator" /> Receiver
+        </div>
+
+        <div class="sign-in-form">
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="form__input"
+            required
+          />
+        </div>
+
+        <div class="sign-in-form">
+          <input
+            type="password"
+            placeholder="Password"
+            class="form__input"
+            required
+            minlength="8"
+          />
+        </div>
+        <div class="buttonbg">
+          <input class="signinbutton" type="submit" value="Sign in" />
+        </div>
+
+        <p class="sign-upmessage">Don't have an account? Sign Up!</p>
+
+        <div class="signupbut">
+          <a class="suptxt" href="Registration.html">Sign up</a>
+        </div>
+        <!--Google Sign in -->
+        <div class="Google_Login" id="my-signin2">
+          <script>
+            function onSuccess(googleUser) {
+              console.log(
+                "Logged in as: " + googleUser.getBasicProfile().getName()
+              );
+            }
+            function onFailure(error) {
+              console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render("my-signin2", {
+                scope: "profile email",
+                width: 240,
+                height: 50,
+                longtitle: true,
+                theme: "dark",
+                onsuccess: onSuccess,
+                onfailure: onFailure,
+              });
+            }
+          </script>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/nav.css" />
+    <link rel="stylesheet" href="CSS/Footer.css"/>
+    <link rel="stylesheet" href="CSS/index.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Main Page: Foodify</title>
+  </head>
+  <body>
+<!-- Navigation -->
+    <nav>
+      <div class="logo">
+        <h4 class="logo"><a href="Index.html"><img src="Img/foodablemain.jpg"></h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="Index.html"> Home </a></li>
+        <li><a href="About.html"> About </a></li>
+        <li><a href="Donator.html"> Donator </a></li>
+        <li><a href="Receiver.html"> Receiver </a></li>
+        <li><a href="contact.html"> Contact </a></li>
+        <li><a href="Login_Page.html"> Login </a></li>
+        <li><a href="Registration.html"> Signup </a></li>
+      </ul>
+      <!-- DropDown Menu -->
+      <div class="menu-nav">
+        <div class="menu-item"></div>
+        <div class="dropdown-container" tabindex="-1">
+          <div class="three-dots"></div>
+          <div class="dropdown">
+            <li><a href="Index.html"> Home </a></li>
+            <li><a href="About.html"> About </a></li>
+            <li><a href="Donator.html"> Donator </a></li>
+            <li><a href="Receiver.html"> Receiver </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+            <li><a href="Login_Page.html"> Login </a></li>
+            <li><a href="Registration.html"> Signup </a></li>
+            <li><a href="Foodbank.html"> Foodbank Locations </a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!-- End Navigation -->
+
+<!-- Main Content -->
+<div class="main_content">
+  <button class="Donate_Food" value="Donate Food"> Donate Food</button>
+  <button class="Receive_Food" value="Donate Food"> Receive Food</button>
+</div>
+<div class="main_content">
+  <h3>At Foodable our focus is to tackle world hunger with healthy food packages that meet peoples different dietary equirements.</h3>
+  <br>
+  <h3>Foodable allows for people to use a single platform for creating packages for a preferred dieatry needs and for people that need them a place to find them!</h3>
+  <br>
+  <h3>Global Hunger is not the only thing we are after!</h3>
+  <h4> Waste is another issues that has been increasing around the world<br> to allow people to donate items that might get tossed away to someone that may need it.</h4>
+  <br>
+</div>
+
+<!-- Foodbank Locations -->
+<div class="main_content">
+    <div id="finder" class="foodbank">
+      <div class="Foodbank-container">
+        <h4 class="heading-Foodbank">Find a foodbank near you</h4>
+        <form method="get" action="Foodbank.html" >
+          <div class="finder__field">
+            <input type="text" class="Foodbank-location" placeholder="Town, city or postcode">
+          </div>
+          <div class="finder__submit">
+              <input type="submit" value="Search" class="btn--blue">
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+<!-- Carousel  -->
+      <div id="slider">
+        <figure>
+          <img src="Img/Image_1.png" alt="Food_1">
+          <img src="Img/pexels-fauxels-3184183.jpg" alt="Food_2">
+          <img src="Img/pexels-pixabay-162927.jpg" alt="Donating_Food">
+          <img src="Img/pexels-julia-m-cameron-6994993.jpg" alt="Donating_Food">
+          <img src="Img/pexels-julia-m-cameron-6994944.jpg" alt="Donating_Food">
+        </figure>
+      </div>
+    </div>
+    <!-- End Carousel  -->
+<!-- End Main Content -->
+   
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="About.html">Services</a></li>
+          <li><a href="About.html">Privacy Policy</a></li>
+          <li><a href="About.html">How it works</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+          <li><a href="contact.html">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Online Functions</h4>
+        <ul>
+          <li><a href="Donator.html">Donate Food</a></li>
+          <li><a href="Donator.html"> Look at What Food you can donate</a></li>
+          <li><a href="Receiver.html">Receive Food</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Search</h4>
+        <div class="Search-Bar">
+          <input class="Search-txt" type="text" name="" placeholder="Type to Search" >
+            <button class="Search-Btn">
+              <i class="fas fa-search">
+            </button></i>
+        </div>
+      </div>
+      <p class="Rights">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved to Foodify
+        </p>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+</body>  
+</html>

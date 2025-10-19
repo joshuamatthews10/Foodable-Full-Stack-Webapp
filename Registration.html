@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS/Registration.css" />
+    <meta
+      name="google-signin-client_id"
+      content="437184470351-9voq0m6bg6lkoio7jstsaou2ap1lqu6d.apps.googleusercontent.com"
+    />
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
+
+    <title>Foodify: Sign up</title>
+  </head>
+  <body>
+    <div class="user">
+      <header class="page_header_logo">
+        <a href="Index.html">
+          <img src="Img/foodablemain.jpg" alt="foodable" />
+        </a>
+        <h1 class="page_title">Foodable Registration</h1>
+      </header>
+
+      <form class="form">
+        <div class="form__group">
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="form__input"
+            required
+          />
+        </div>
+
+        <div class="form__group">
+          <input
+            id="create_pw"
+            type="password"
+            placeholder="Password"
+            class="form__input"
+            required
+            minlength="8"
+          />
+        </div>
+
+        <div class="form__group">
+          <input
+            id="confirm_pw"
+            type="password"
+            placeholder="Re-enter Password"
+            class="form__input"
+            required
+          />
+        </div>
+
+        <div class="accounttype">
+          <input type="radio" name="Donator" /> Donator
+          <input type="radio" name="Donator" /> Receiver
+        </div>
+
+        <div class="tosbox">
+          <input type="checkbox" id="ToS" name="ToS" value="ToS" required />
+          <label for="ToS"
+            >I agree to the <a href="">Terms of Use</a> and
+            <a href="">Privacy Policy</a></label
+          >
+        </div>
+
+        <div class="buttonbg">
+          <input class="regbut" type="submit" value="Register" />
+        </div>
+        <p class="sign-inmessage">Or if you have an account</p>
+
+        <div class="signinbut">
+          <a class="sintxt" href="Login_Page.html">Sign In</a>
+        </div>
+        <!--Google Sign in -->
+        <div class="Google_Login" id="my-signin2">
+          <script>
+            function onSuccess(googleUser) {
+              console.log(
+                "Logged in as: " + googleUser.getBasicProfile().getName()
+              );
+            }
+            function onFailure(error) {
+              console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render("my-signin2", {
+                scope: "profile email",
+                width: 240,
+                height: 50,
+                longtitle: true,
+                theme: "dark",
+                onsuccess: onSuccess,
+                onfailure: onFailure,
+              });
+            }
+          </script>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
